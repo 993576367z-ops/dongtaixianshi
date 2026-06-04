@@ -1,74 +1,100 @@
-<!DOCTYPE html>
-<html lang="zh">
+<!doctype html>
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>企业官网</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>示例企业 - 专业服务与解决方案</title>
+  <meta name="description" content="示例企业提供软件开发、设计与咨询服务，助力客户实现数字化转型。" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- 导航栏 -->
-  <nav class="navbar">
-    <div class="logo">企业LOGO</div>
-    <ul class="nav-links">
-      <li><a href="index.html">首页</a></li>
-      <li><a href="about.html">关于我们</a></li>
-      <li><a href="services.html">服务</a></li>
-      <li><a href="contact.html">联系我们</a></li>
-    </ul>
-  </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">示例企业</a>
+      <button class="nav-toggle" id="navToggle" aria-label="打开菜单">☰</button>
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html">首页</a>
+        <a href="about.html">关于我们</a>
+        <a href="services.html">服务</a>
+        <a href="portfolio.html">作品</a>
+        <a href="blog.html">博客</a>
+        <a href="contact.html" class="btn">联系我们</a>
+      </nav>
+    </div>
+  </header>
 
-  <!-- 首页轮播图 -->
-  <section class="carousel">
-    <div class="slides">
-      <div class="slide active" style="background-image: url('images/slide1.jpg')">
-        <div class="slide-text">
-          <h2>高效解决方案</h2>
-          <p>助力企业快速发展</p>
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1>推动您的业务迈向数字化未来</h1>
+          <p>我们提供产品设计、软件开发和商业咨询，帮助企业实现增长与效率提升。</p>
+          <p>
+            <a href="services.html" class="btn">查看服务</a>
+            <a href="contact.html" class="btn btn-outline">免费咨询</a>
+          </p>
+        </div>
+        <div class="hero-image" aria-hidden="true">
+          <img src="https://source.unsplash.com/800x600/?office,team" alt="团队协作" />
         </div>
       </div>
-      <div class="slide" style="background-image: url('images/slide2.jpg')">
-        <div class="slide-text">
-          <h2>创新技术支持</h2>
-          <p>为客户提供领先技术</p>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <h2 class="section-title">我们的服务</h2>
+        <div class="grid services-grid">
+          <article class="card">
+            <h3>软件开发</h3>
+            <p>基于 web、移动与云的定制化开发，覆盖前端、后端与运维（DevOps）。</p>
+          </article>
+          <article class="card">
+            <h3>产品设计</h3>
+            <p>从用户研究到交互与视觉设计，打造可用、美观且可拓展的产品体验。</p>
+          </article>
+          <article class="card">
+            <h3>商业咨询</h3>
+            <p>数字化转型咨询、技术评估与落地计划，帮助您制定可执行的路线图。</p>
+          </article>
         </div>
       </div>
-      <div class="slide" style="background-image: url('images/slide3.jpg')">
-        <div class="slide-text">
-          <h2>优质服务体验</h2>
-          <p>客户满意是我们的宗旨</p>
+    </section>
+
+    <!-- Portfolio preview -->
+    <section class="section section-alt" id="portfolio">
+      <div class="container">
+        <h2 class="section-title">项目精选</h2>
+        <div class="grid portfolio-grid">
+          <figure class="portfolio-item"><img src="https://source.unsplash.com/400x300/?app" alt="项目1"><figcaption>企业级管理系统</figcaption></figure>
+          <figure class="portfolio-item"><img src="https://source.unsplash.com/400x300/?website" alt="项目2"><figcaption>电商平台改造</figcaption></figure>
+          <figure class="portfolio-item"><img src="https://source.unsplash.com/400x300/?dashboard" alt="项目3"><figcaption>数据可视化仪表盘</figcaption></figure>
+          <figure class="portfolio-item"><img src="https://source.unsplash.com/400x300/?mobile" alt="项目4"><figcaption>移动端App</figcaption></figure>
+          <figure class="portfolio-item"><img src="https://source.unsplash.com/400x300/?design" alt="项目5"><figcaption>品牌与视觉设计</figcaption></figure>
+          <figure class="portfolio-item"><img src="https://source.unsplash.com/400x300/?cloud" alt="项目6"><figcaption>云架构迁移</figcaption></figure>
+        </div>
+        <p class="center"><a href="portfolio.html" class="btn">查看全部作品</a></p>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <h2 class="section-title">客户评价</h2>
+        <div class="grid testimonial-grid">
+          <blockquote class="testimonial">“合作专业高效，产品上线速度超出预期。” <footer>— 客户公司 A</footer></blockquote>
+          <blockquote class="testimonial">“设计团队把复杂流程做得非常简单，用户满意度提升明显。” <footer>— 客户公司 B</footer></blockquote>
         </div>
       </div>
-    </div>
-    <div class="carousel-buttons">
-      <button class="prev">&#10094;</button>
-      <button class="next">&#10095;</button>
-    </div>
-  </section>
+    </section>
 
-  <!-- 服务卡片 -->
-  <section class="services">
-    <h2>我们的服务</h2>
-    <div class="service-cards">
-      <div class="card">
-        <h3>服务一</h3>
-        <p>高质量解决方案，满足企业需求。</p>
-      </div>
-      <div class="card">
-        <h3>服务二</h3>
-        <p>专业执行与管理，保证项目顺利交付。</p>
-      </div>
-      <div class="card">
-        <h3>服务三</h3>
-        <p>持续优化，提升客户满意度和体验。</p>
-      </div>
-    </div>
-  </section>
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container cta-inner">
+        <h3>准备好开始了吗？</h3>
+        <p>联系示例企业，我们会在1个工作日内为您安排免费咨询。</p>
+        <a href="contact.html" class="
 
-  <footer>
-    © 2026 企业名称. 版权所有.
-  </footer>
-
-  <script src="js/carousel.js"></script>
-</body>
 </html>
