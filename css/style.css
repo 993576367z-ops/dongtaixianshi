@@ -1,0 +1,86 @@
+:root{
+  --brand:#0b6efd;
+  --bg:#f7f8fb;
+  --text:#1b1b1b;
+  --muted:#6b7280;
+  --card:#ffffff;
+  --radius:10px;
+  --container:1100px;
+  --gap:1.5rem;
+}
+*{box-sizing:border-box}
+html,body{height:100%;}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  color:var(--text);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+}
+.container{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:1rem;
+}
+.header-inner, .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;}
+.site-header{background:#fff;border-bottom:1px solid #e6e9ef;position:sticky;top:0;z-index:50;}
+.brand{font-weight:700;color:var(--brand);text-decoration:none;font-size:1.1rem;}
+.site-nav{display:flex;gap:0.75rem;align-items:center;}
+.site-nav a{color:var(--text);text-decoration:none;padding:0.5rem 0.6rem;border-radius:6px;}
+.site-nav a.btn{background:var(--brand);color:#fff;padding:0.5rem 0.9rem;}
+.site-nav a.btn-outline{border:1px solid var(--brand);color:var(--brand);background:transparent;}
+.nav-toggle{display:none;background:none;border:0;font-size:1.25rem;padding:0.4rem}
+
+/* Hero */
+.hero{padding:3rem 0;background:linear-gradient(90deg, rgba(11,110,253,0.05), rgba(255,255,255,0));}
+.hero-inner{display:flex;gap:2rem;align-items:center;flex-wrap:wrap;}
+.hero-content{flex:1 1 420px;}
+.hero h1{margin:0 0 0.5rem;font-size:2rem;}
+.hero p{margin:0 0 1rem;color:var(--muted)}
+.hero-image img{width:100%;height:auto;border-radius:12px;box-shadow:0 8px 30px rgba(11,110,253,0.08);}
+
+/* Sections */
+.section{padding:2.5rem 0;}
+.section-alt{background:#fff;}
+.section-title{font-size:1.25rem;margin-bottom:1rem;}
+.grid{display:grid;gap:var(--gap);}
+.services-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
+.card{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:0 6px 20px rgba(18,23,31,0.04);}
+.portfolio-grid{grid-template-columns:repeat(auto-fit,minmax(180px,1fr));}
+.portfolio-item img{width:100%;height:140px;object-fit:cover;border-radius:8px;display:block;}
+.testimonial-grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));}
+.testimonial{background:linear-gradient(180deg,#fff,#fbfdff);padding:1rem;border-radius:10px;border:1px solid #eef2ff;}
+
+/* Team & others */
+.team-grid{grid-template-columns:repeat(auto-fit,minmax(180px,1fr));}
+.services-detail{grid-template-columns:repeat(auto-fit,minmax(240px,1fr));}
+.portfolio-grid-full{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
+.portfolio-grid-full .card img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:0.75rem;}
+.post-list{list-style:none;padding:0;margin:0;}
+.post-list li{padding:0.75rem 0;border-bottom:1px solid #eee;}
+.muted{color:var(--muted);font-size:0.9rem}
+
+/* CTA */
+.cta{background:var(--brand);color:#fff;padding:2rem 0;border-radius:0;margin-top:1rem;}
+.cta-inner{display:flex;gap:1rem;align-items:center;justify-content:space-between;flex-wrap:wrap;}
+.btn{background:var(--brand);color:#fff;border:0;padding:0.6rem 1rem;border-radius:8px;text-decoration:none;display:inline-block;}
+.btn-outline{background:transparent;border:1px solid var(--brand);color:var(--brand);}
+
+/* Contact form */
+.contact-form{max-width:680px;}
+.contact-form label{display:block;margin-bottom:0.6rem;color:var(--muted)}
+.contact-form input,.contact-form textarea{width:100%;padding:0.6rem;border-radius:8px;border:1px solid #e6e9ef;margin-top:0.25rem}
+.form-status{margin-top:0.5rem;color:var(--muted)}
+
+/* Footer */
+.site-footer{padding:1.5rem 0;background:#fff;border-top:1px solid #e6e9ef;margin-top:2rem;}
+.footer-nav a{margin-right:0.5rem;color:var(--muted);text-decoration:none;font-size:0.95rem}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-inner{flex-direction:column-reverse;}
+  .nav-toggle{display:inline-block;}
+  .site-nav{position:fixed;right:12px;top:64px;background:#fff;flex-direction:column;padding:0.5rem;border-radius:10px;box-shadow:0 8px 30px rgba(2,6,23,0.08);display:none;}
+  .site-nav.show{display:flex;}
+  .header-inner{padding:0.5rem 1rem;}
+}
